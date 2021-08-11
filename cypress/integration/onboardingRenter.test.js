@@ -74,7 +74,7 @@ const setInput = element => {
     cy.get('form .error').should('have.length',0);
 };
 
-describe('Test all onboarding renter on stage', function() {
+describe('Golden Flow onboarding renter', function() {
     it('Onboarding renter', function() {
 
         cy.visit(`${baseURL.stage}/application/new/renter/`);

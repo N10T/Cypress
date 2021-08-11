@@ -1,5 +1,5 @@
 # Cypress testing
-Test discovery on unkle app
+Test du golden flow on unkle app
 ----------------
 
 To open the testing page: `yarn run cypress:open`
