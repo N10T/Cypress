@@ -1,9 +1,4 @@
-const delay = {
-    flash: 10,
-    fast: 100,
-    normal:300,
-    slow:500,
-}
+const { delay, baseURL } = require('../../config')
 
 const userOk = {
     first_name: 'Jôé',
@@ -82,7 +77,7 @@ const setInput = (element) => {
 describe('Test all onboarding renter on stage', function() {
     it('Onboarding renter', function() {
 
-        cy.visit('https://stage.unkle.io/application/new/renter/');
+        cy.visit(`${baseURL.stage}/application/new/renter/`);
 
         //Escape cookie banner
         cy.get('.cookie-banner button').click();
