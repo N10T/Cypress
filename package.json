@@ -1,0 +1,16 @@
+{
+  "name": "cypress-test",
+  "version": "1.0.0",
+  "description": "Testing Unkle App with cypress",
+  "main": "index.js",
+  "repository": "https://github.com/N10T/Cypress.git",
+  "author": "Andy",
+  "license": "Unkle",
+  "private": true,
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^8.2.0"
+  }
+}
