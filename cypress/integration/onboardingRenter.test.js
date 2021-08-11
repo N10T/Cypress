@@ -1,4 +1,4 @@
-const { delay, baseURL } = require('../../config')
+const { delay, baseURL } = require('../../config');
 
 const userOk = {
     first_name: 'Jôé',
@@ -64,7 +64,7 @@ const completeStep = isDynamic => cy.get('form [name]').each(([element],i,arr) =
     }
 });
 
-const setInput = (element) => {
+const setInput = element => {
     cy.get(element).type(userBad[element.name], {delay:delay.normal});
     cy.wait(10)
     cy.get('form .error').should('have.length',1);
@@ -72,7 +72,7 @@ const setInput = (element) => {
     cy.get(element).clear();
     cy.get(element).type(userOk[element.name], {delay:delay.normal});
     cy.get('form .error').should('have.length',0);
-}
+};
 
 describe('Test all onboarding renter on stage', function() {
     it('Onboarding renter', function() {
@@ -124,4 +124,4 @@ describe('Test all onboarding renter on stage', function() {
 
         cy.url().should('includes', 'dashboard');
     })
-})
+});
